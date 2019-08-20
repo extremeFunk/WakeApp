@@ -1,0 +1,9 @@
+.root {
+    -fx-background-color: rgb(60,60,60);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.label {
+    -fx-text-fill: -swatch-500;
+}

@@ -1,0 +1,20 @@
+.root {
+    -size: 24;
+    -color-prime: black;
+    -fx-font-size: 24pt;
+    -up-arrow: "M7,5l5,-5 5,5z";
+    -down-arrow: "M7,6l5,5 5,-5z";
+}
+.time {
+    -font-size: 36
+}
+.up-btn{
+    -fx-background-color: black;
+    -fx-shape: "M7,5l5,-5 5,5z";
+}
+
+.down-btn{
+    -fx-background-color: black;
+    -fx-shape: "M7,6l5,5 5,-5z";
+}
+

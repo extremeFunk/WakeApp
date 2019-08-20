@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <VBox spacing="10.0">
+       <Label>Delay</Label>
+       <Spinner fx:id="delaySpinner" />
+
+       <Label>Device</Label>
+       <ComboBox fx:id="deviceCBox" />
+
+       <Label>Volume</Label>
+       <Slider fx:id="volSlider" />
+       <HBox alignment="CENTER_LEFT" spacing="10">
+           <ToggleButton fx:id="snoozeToggle">Snooze</ToggleButton>
+           <Label />
+       </HBox>
+       <Spinner fx:id="snoozeSpinner" />
+       <HBox alignment="CENTER_LEFT" spacing="10">
+           <ToggleButton fx:id="shutoffToggle">Shutoff</ToggleButton>
+           <Label />
+        </HBox>
+       <Spinner fx:id="shutoffSpinner" />
+
+       <Label>Sound</Label>
+       <ComboBox fx:id="soundCBox" />
+
+       <HBox alignment="CENTER" spacing="5.0">
+           <Button fx:id="cancelBtn" minWidth="100.0">Cancel</Button>
+           <Button fx:id="okBtn" minWidth="100.0">Ok</Button>
+       </HBox>
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+   </VBox>
+</AnchorPane>

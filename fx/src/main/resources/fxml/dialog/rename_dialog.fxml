@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="5.0" styleClass=".gray-dialog" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Preset name:" />
+    <TextField fx:id="input" />
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="cancelBtn" prefWidth="80.0">Cancel</Button>
+        <Button fx:id="okBtn" prefWidth="80.0">Ok</Button>
+    </HBox>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

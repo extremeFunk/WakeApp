@@ -1,0 +1,9 @@
+.root {
+	-mainHeight: 500;
+    -mainWidth: 300;
+
+    -fx-min-height: -mainHeight;
+    -fx-min-width: -mainWidth;
+    -fx-max-height: -mainHeight;
+    -fx-max-width: -mainWidth;
+}

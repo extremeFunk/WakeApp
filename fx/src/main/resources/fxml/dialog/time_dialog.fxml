@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="root" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane>
+         <children>
+            <HBox alignment="CENTER">
+                <VBox alignment="CENTER">
+                    <Button fx:id="plus5Hr" prefHeight="40.0" prefWidth="40.0" styleClass="set-btn" text="+5" />
+                  <Spinner fx:id="hrSpinner" prefWidth="80.0" styleClass="time" />
+                  <Button fx:id="minus5Hr" prefHeight="40.0" prefWidth="40.0" styleClass="set-btn" text="-5" />
+                  <HBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+                </VBox>
+
+                <Label styleClass="time" text=":" />
+
+                <VBox alignment="CENTER">
+                    <Button fx:id="plus5Mn" prefHeight="40.0" prefWidth="40.0" styleClass="set-btn" text="+5" />
+                    <Spinner fx:id="mnSpinner" prefWidth="80.0" styleClass="time" />
+                    <Button fx:id="minus5Mn" prefHeight="40.0" prefWidth="40.0" styleClass="set-btn" text="-5" />
+                  <HBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+                </VBox>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" spacing="5.0">
+          <Button fx:id="cancelBtn" minWidth="70.0">Cancel</Button>
+          <Button fx:id="okBtn" minWidth="70.0">Ok</Button>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+    <stylesheets>
+        <URL value="@../../css/Main.css" />
+        <URL value="@../../css/TimeDialog.css" />
+    </stylesheets>
+</VBox>

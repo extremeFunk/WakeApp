@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout"
+    tools:activity="io.rainrobot.wake.android.activities.LoginActivity">
+
+        <EditText
+                android:id="@+id/loginTxtBoxUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="text"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"/>
+
+        <EditText
+                android:id="@+id/loginTxtBoxPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textNoSuggestions|textPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginTxtBoxUsername"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"/>
+
+        <CheckBox
+                android:id="@+id/loginCheckBoxRememberMe"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:text="Remember Me"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginTxtBoxPassword" android:layout_marginTop="16dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <Button
+                android:id="@+id/LoginBtnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                app:layout_constraintStart_toEndOf="@+id/LoginBtnSingup" android:layout_marginStart="88dp"
+                app:layout_constraintTop_toTopOf="@+id/LoginBtnSingup" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="120dp" app:layout_constraintHorizontal_bias="0.5"/>
+
+        <Button
+                android:id="@+id/LoginBtnSingup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sing up"
+                app:layout_constraintTop_toBottomOf="@+id/loginCheckBoxRememberMe"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/LoginBtnLogin"
+                android:layout_marginStart="120dp"/>
+
+        <TextView
+                android:id="@+id/txtMsgLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/LoginBtnSingup" app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

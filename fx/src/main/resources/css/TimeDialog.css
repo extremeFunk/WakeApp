@@ -1,0 +1,33 @@
+.root {
+    -fx-background-color: rgb(60, 60, 60);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.spinner {
+    -fx-border-color: transparent;
+    -fx-min-height: 100;
+    -fx-alignment: baseline-center;
+}
+
+.spinner> .text-field {
+    -fx-alignment: CENTER;
+    -fx-text-alignment : center;
+}
+
+.text-field, .time{
+    -fx-font-size: 24px;
+    -fx-text-fill: -swatch-500;
+    -fx-alignment: center;
+}
+
+
+.set-btn, set-btn:focused{
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
+}
+
+.conf-btn{
+    -fx-min-width: 50;
+}
+

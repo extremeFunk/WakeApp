@@ -1,7 +1,7 @@
 package io.rainrobot.wake.android.configuration;
 
 import io.rainrobot.wake.android.view.AndroidEnterNewPasswordView;
-import io.rainrobot.wake.android.view.enterEmailView;
+import io.rainrobot.wake.android.view.AndroidEnterEmailView;
 import io.rainrobot.wake.app.IViewFactory;
 import io.rainrobot.wake.view.*;
 import io.rainrobot.wake.android.textbox.AndroidTextBoxView;
@@ -18,7 +18,7 @@ import io.rainrobot.wake.android.view.singup.AndroidSingupView;
 
 public class AndroidViewFactory implements IViewFactory {
 
-    private enterEmailView enterEmail;
+    private AndroidEnterEmailView enterEmail;
     private LoginView loginView;
     private TextBoxView textBoxView;
     private SingupView singupView;
@@ -46,7 +46,7 @@ public class AndroidViewFactory implements IViewFactory {
         deviceEventsView = new AndroidDeviceEventsView(contextMgr);
         isNewDeviceView = new IsNewDeviceImp(contextMgr);
         enterNewPassord = new AndroidEnterNewPasswordView(contextMgr);
-        enterEmail = new enterEmailView(contextMgr);
+        enterEmail = new AndroidEnterEmailView(contextMgr);
     }
 
     @Override

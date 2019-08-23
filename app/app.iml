@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+<module type="JAVA_MODULE" version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" linkedProjectId=":app" linkedProjectPath="$MODULE_DIR$" rootProjectPath="$MODULE_DIR$/.." />
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
@@ -28,5 +29,17 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="core" exported="" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: httpclient-android-4.3.3" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: hibernate-jpa-2.1-api-1.0.0.Final" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: jackson-datatype-jsr310-2.9.6" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: jackson-databind-2.9.6" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: jackson-annotations-2.9.0" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: jackson-core-2.9.6" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: httpclient-android-4.3.3" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: hibernate-jpa-2.1-api-1.0.0.Final" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: jackson-datatype-jsr310-2.9.6" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: jackson-databind-2.9.6" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: jackson-annotations-2.9.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: jackson-core-2.9.6" level="project" />
   </component>
 </module>

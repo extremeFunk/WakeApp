@@ -35,4 +35,8 @@ public class ContextMgr implements ContextProvider{
 
     public boolean isThinkDialogShow() { return thinkDialogSwitch.isShow();}
     public boolean isThinkDialogClose() { return thinkDialogSwitch.isClose();}
+
+    public AndroidView getView() {
+        return view;
+    }
 }

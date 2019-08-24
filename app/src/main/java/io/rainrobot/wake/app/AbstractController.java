@@ -44,6 +44,10 @@ public abstract class AbstractController<T1 extends IView, T2 extends IModel> {
                 () -> view.stopThinkMode());
     }
 
+    public void showMsg(String string) {
+        view.showMsg(string);
+    }
+
     class ControllerExceptionHandler implements Consumer<Exception> {
 
         @Override

@@ -25,6 +25,14 @@ public abstract class WakeActivity extends AppCompatActivity {
         else {
             app.setActivity(this);
         }
+        showStartMsgIfExist();
+    }
+
+    private void showStartMsgIfExist() {
+        AndroidView view = app.getContextMgr().getView();
+        if (view != null && view.isShowMsgOnStart()) {
+            view.showMsg(view.getStartMsg());
+        }
     }
 
     @Override

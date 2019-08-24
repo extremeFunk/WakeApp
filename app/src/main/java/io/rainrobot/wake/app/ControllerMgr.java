@@ -63,7 +63,9 @@ public class ControllerMgr {
 
 
 	public void showEnterNewPassword() {
-		container.getEnterNewPassword().show();
+		container
+				.getEnterNewPassword()
+				.showWithMsg("a validation code has been sent to your email");
 	}
 
 	public void showEnterMail() { container.getEnterEmail().show(); }

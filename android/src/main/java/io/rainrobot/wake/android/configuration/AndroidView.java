@@ -4,6 +4,7 @@ import android.view.View;
 
 import io.rainrobot.wake.app.AbstractController;
 import io.rainrobot.wake.app.IView;
+import io.rainrobot.wake.core.util.Log;
 
 public abstract class AndroidView<T1 extends WakeActivity, T2 extends AbstractController> implements IView<T2> {
 
@@ -11,7 +12,7 @@ public abstract class AndroidView<T1 extends WakeActivity, T2 extends AbstractCo
     private ContextMgr contextMgr;
     private Class<T1> activityClass;
     protected T2 controller;
-
+    private String startMsg = "";
 
 
     public AndroidView(ContextMgr contextMgr, Class<T1> activityClass) {
@@ -39,7 +40,10 @@ public abstract class AndroidView<T1 extends WakeActivity, T2 extends AbstractCo
     }
 
     public void showMsg(String string) {
-        activity.showMsg(string);
+        //on showing the activity will be null, and the message
+        //will be provoked by the activity onCreate method
+        if (activity == null) startMsg = string;
+        else activity.showMsg(string);
     }
 
     @Override
@@ -54,5 +58,14 @@ public abstract class AndroidView<T1 extends WakeActivity, T2 extends AbstractCo
         if(contextMgr.isThinkDialogClose()) {
             activity.hideThinkDialog();
         }
+    }
+
+    public boolean isShowMsgOnStart() {
+        if (startMsg == "") return false;
+        else return true;
+    }
+
+    public String getStartMsg() {
+        return startMsg;
     }
 }

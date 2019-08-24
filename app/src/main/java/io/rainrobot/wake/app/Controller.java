@@ -12,4 +12,9 @@ public abstract class Controller<T1 extends IView, T2 extends IModel> extends Ab
     public void show() {
         view.show();
     }
+
+    public void showWithMsg(String string) {
+        show();
+        view.showMsg(string);
+    }
 }

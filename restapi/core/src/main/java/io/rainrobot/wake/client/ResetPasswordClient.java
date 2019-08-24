@@ -14,6 +14,6 @@ public class ResetPasswordClient {
     }
 
     public void resetPassword(String token, String passowrd) {
-        sender.sendWithParam(URL, token, HttpMethodEnum.POST, Void.class, passowrd);
+        sender.sendWithParam(URL, token, HttpMethodEnum.PUT, Void.class, passowrd);
     }
 }

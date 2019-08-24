@@ -17,9 +17,9 @@ public class AndroidEnterNewPasswordView extends AndroidView<EnterNewPasswordAct
     @Override
     protected void initializeActivity() {
         ((Button)findViewById(R.id.enterNewPasswordGoBackBtn))
-                .setOnClickListener((V) -> controller.getGoBackCommand());
+                .setOnClickListener((V) -> controller.getGoBackCommand().execute());
         ((Button)findViewById(R.id.enterNewPasswordSendBtn))
-                .setOnClickListener((V) -> controller.getSendCommand());
+                .setOnClickListener((V) -> controller.getSendCommand().execute());
     }
 
     @Override

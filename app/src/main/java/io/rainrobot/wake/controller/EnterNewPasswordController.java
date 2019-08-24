@@ -26,7 +26,7 @@ public class EnterNewPasswordController extends Controller<EnterNewPasswordView,
                         model.sendNewPasswordAndToken(  view.getTokenField(),
                                                         view.getNewPasswordField());
                 }),
-                (() -> controllerMgr.showMainMenu()));
+                (() -> controllerMgr.showLogin()));
     }
 
     private void checkPassword(String newPass, String confirmPass) {
@@ -35,6 +35,6 @@ public class EnterNewPasswordController extends Controller<EnterNewPasswordView,
     }
 
     public Command getGoBackCommand() {
-        return () -> controllerMgr.showEnterNewPassword();
+        return () -> controllerMgr.showEnterMail();
     }
 }

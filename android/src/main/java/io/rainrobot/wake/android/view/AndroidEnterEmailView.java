@@ -10,6 +10,7 @@ import io.rainrobot.wake.controller.EnterEmailController;
 import io.rainrobot.wake.view.EnterEmailView;
 
 public class AndroidEnterEmailView extends AndroidView<EnterEmailActivity, EnterEmailController> implements EnterEmailView {
+
     public AndroidEnterEmailView(ContextMgr contextMgr) {
         super(contextMgr, EnterEmailActivity.class);
     }
@@ -17,9 +18,9 @@ public class AndroidEnterEmailView extends AndroidView<EnterEmailActivity, Enter
     @Override
     protected void initializeActivity() {
         ((Button)findViewById(R.id.enterEmailGoBackBtn))
-                .setOnClickListener((V) -> controller.getGoBackCommand());
+                .setOnClickListener((V) -> controller.getGoBackCommand().execute());
         ((Button)findViewById(R.id.enterEmailSendBtn))
-                .setOnClickListener((V) -> controller.getSendCommand());
+                .setOnClickListener((V) -> controller.getSendCommand().execute());
     }
 
     @Override

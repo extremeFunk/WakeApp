@@ -61,6 +61,12 @@
             android:name=".SelectDeviceActivity"
             android:label="What is this device Name?"/>
         <activity
+                android:name=".EnterEmailActivity"
+                android:label="Enter your email:"/>
+        <activity
+                android:name=".EnterNewPasswordActivity"
+                android:label="Reset Password"/>
+        <activity
             android:name=".EventListActivity"
             android:label="Alarm Events"
             android:screenOrientation="portrait" />

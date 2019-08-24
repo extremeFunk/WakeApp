@@ -145,7 +145,7 @@ public class LoginActivityTest {
     }
 
     private void setUsernameToUi(String string) {
-        onView(withId(R.id.enterNewPasswordEditTxt)).perform(ViewActions.typeText(string));
+        onView(withId(R.id.loginUsernameTxt)).perform(ViewActions.typeText(string));
     }
 
     private void setPasswordToUi(String string) {

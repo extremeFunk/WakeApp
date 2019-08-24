@@ -3,9 +3,8 @@ package io.rainrobot.wake.android.configuration;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity;
 import io.rainrobot.wake.android.activities.R;
-
 
 public abstract class WakeActivity extends AppCompatActivity {
 

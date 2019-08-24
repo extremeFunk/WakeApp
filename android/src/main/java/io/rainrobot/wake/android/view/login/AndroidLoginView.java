@@ -23,7 +23,7 @@ public class AndroidLoginView extends AndroidView<LoginActivity, LoginController
 
 	@Override
 	public void setLoginCommand(Command command) {
-		Button btn = activity.findViewById((R.id.enterNewPasswordSendBtn));
+		Button btn = activity.findViewById((R.id.loginSendBtn));
 		btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -43,7 +43,7 @@ public class AndroidLoginView extends AndroidView<LoginActivity, LoginController
 			imm.hideSoftInputFromWindow(passET.getWindowToken(), 0);
 		}
 
-		EditText userET = activity.findViewById(R.id.enterNewPasswordEditTxt);
+		EditText userET = activity.findViewById(R.id.loginUsernameTxt);
 		if (imm.isActive(userET)) {
 			imm.hideSoftInputFromWindow(userET.getWindowToken(), 0);
 		}
@@ -51,7 +51,7 @@ public class AndroidLoginView extends AndroidView<LoginActivity, LoginController
 
 	@Override
 	public void setSingupCommand(Command command) {
-		Button btn = activity.findViewById((R.id.enterNewPasswordGoBackBtn));
+		Button btn = activity.findViewById((R.id.loginGoBackBtn));
 		btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -62,12 +62,18 @@ public class AndroidLoginView extends AndroidView<LoginActivity, LoginController
 
 	@Override
 	public void setForgotPasswordCommand(Command command) {
-
+		Button btn = activity.findViewById((R.id.loginForgotPassBtn));
+		btn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				command.execute();
+			}
+		});
 	}
 
 	@Override
 	public String getUsernameField() {
-		return  ((EditText)activity.findViewById(R.id.enterNewPasswordEditTxt))
+		return  ((EditText)activity.findViewById(R.id.loginUsernameTxt))
 				.getText()
 				.toString();
 	}
@@ -89,6 +95,7 @@ public class AndroidLoginView extends AndroidView<LoginActivity, LoginController
 	protected void initializeActivity() {
 		setLoginCommand(controller.getLoginCommand());
 		setSingupCommand(controller.getSingupCommand());
+		setForgotPasswordCommand(controller.getForgotPasswordCommand());
 	}
 
 }

@@ -23,7 +23,7 @@ public class AndroidLoginView extends AndroidView<LoginActivity, LoginController
 
 	@Override
 	public void setLoginCommand(Command command) {
-		Button btn = activity.findViewById((R.id.LoginBtnLogin));
+		Button btn = activity.findViewById((R.id.enterNewPasswordSendBtn));
 		btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -51,7 +51,7 @@ public class AndroidLoginView extends AndroidView<LoginActivity, LoginController
 
 	@Override
 	public void setSingupCommand(Command command) {
-		Button btn = activity.findViewById((R.id.LoginBtnSingup));
+		Button btn = activity.findViewById((R.id.enterNewPasswordGoBackBtn));
 		btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

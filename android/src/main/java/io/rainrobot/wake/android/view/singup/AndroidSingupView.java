@@ -28,7 +28,9 @@ public class AndroidSingupView extends AndroidView<SingupActivity, SingupControl
 
     @Override
     public String getEmailField() {
-        return null;
+        return ((EditText)activity.findViewById(R.id.singEmail))
+                .getText()
+                .toString();
     }
 
     @Override

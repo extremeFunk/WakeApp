@@ -106,7 +106,7 @@ public class LoginActivityTest {
 
     @Test
     public void btnSingupClick() {
-        onView(withId(R.id.LoginBtnSingup)).perform(ViewActions.click());
+        onView(withId(R.id.enterNewPasswordGoBackBtn)).perform(ViewActions.click());
         verify(controllerMgr).showSingup();
 
     }
@@ -141,7 +141,7 @@ public class LoginActivityTest {
     }
 
     private void clickLoginOnUi() {
-        onView(withId(R.id.LoginBtnLogin)).perform(ViewActions.click());
+        onView(withId(R.id.enterNewPasswordSendBtn)).perform(ViewActions.click());
     }
 
     private void setUsernameToUi(String string) {

@@ -80,14 +80,18 @@ public class AndroidEventListView extends AndroidView<EventListActivity, EventLi
 
     private void setList(List<Device> devices) {
         controller.getAllEvents((events) -> {
-            loadDevicesToEvents(devices, events);
-            listAdapter = new EventListItemAdapter((EventListActivity) activity,
-                                                    events,
-                                                    createEventEditDialogFactory(devices),
-                                                    controller.getRemoveCommand());
-            ListView rView = activity.findViewById(R.id.eventListRecyclerView);
-            rView.setAdapter(listAdapter);
+            eventListConsumer(devices, events);
         });
+    }
+
+    private void eventListConsumer(List<Device> devices, List<AlarmEvent> events) {
+        loadDevicesToEvents(devices, events);
+        listAdapter = new EventListItemAdapter((EventListActivity) activity,
+                                                events,
+                                                createEventEditDialogFactory(devices),
+                                                controller.getRemoveCommand());
+        ListView rView = activity.findViewById(R.id.eventListRecyclerView);
+        rView.setAdapter(listAdapter);
     }
 
     private void loadDevicesToEvents(List<Device> devices, List<AlarmEvent> events) {

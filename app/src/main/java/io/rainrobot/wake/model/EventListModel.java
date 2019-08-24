@@ -32,9 +32,7 @@ public class EventListModel implements IModel {
 	}
 
 	public List<AlarmEvent> getAllEvents(int preset_id) {
-				return Arrays.asList(
-						eventClient.getAllEvents(preset_id)
-				);
+		return new ArrayList(Arrays.asList(eventClient.getAllEvents(preset_id)));
 	}
 
 	public AlarmEvent createEvent(int preset_id) {

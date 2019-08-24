@@ -11,6 +11,10 @@
 /.idea
 /bu
 
+*.log
+*.iml
+*.properties
+
 android/bin
 android/build
 android/arc
@@ -20,6 +24,9 @@ android/.settings
 android/.idea
 android/bu
 android/release
+android/*.log
+android/*.iml
+android/*.properties
 
 app/bin
 app/build
@@ -30,6 +37,9 @@ app/.settings
 app/.idea
 app/bu
 app/testalarm
+app/*.log
+app/*.iml
+app/*.properties
 
 fx/bin
 fx/build
@@ -39,6 +49,9 @@ fx/.metadata
 fx/.settings
 fx/.idea
 fx/bu
+fx/*.log
+fx/*.iml
+fx/*.properties
 
 restapi/bin
 restapi/build
@@ -48,6 +61,9 @@ restapi/.metadata
 restapi/.settings
 restapi/.idea
 restapi/bu
+restapi/*.log
+restapi/*.iml
+restapi/*.properties
 
 restapi/core/bin
 restapi/core/build
@@ -57,5 +73,7 @@ restapi.core/.metadata
 restapi/core/.settings
 restapi/core/.idea
 restapi/core/bu
+restapi/core/*.log
+restapi/core/*.iml
+restapi/core/*.properties
 
-*.log

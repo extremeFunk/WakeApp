@@ -1,18 +1,20 @@
 # WakeApp
-This project is an alarm clock application which run on Android, Windows and Mac.
+This application is a multi-device alarm clock that synchronize the timing and behavior of alarm events across different devices (Android, Windows and Mac platforms) communicating through a RESTful web service. 
 
-The user is subscribing to an account and can sync multiple alarm events across different device under their account.
-The project utilizes Gradle as building tool. the project has:
+Users our subscribing to an account and register their devices. Alarm event than can be synchronized between the devises with fixed time intervals (or simultaneously) and can be set from any of device.  
 
-  * RestApi server (using Spring boot).
-  * Android client and UI.
-  *	Windows/Mac client and UI (using Javafx).
+The project utilizes Gradle as a building tool. It implements:
+  * RESTful web service (using Spring boot).
+  * Android Mobile application.
+  *	Windows/Mac Desktop application (using JavaFx).
 
-The is project structured by modules which form a dependency relationship between them:
+This is a modular Gradle project. Both server and client side utilize common code (found in the “core” module) and both mobile and desktop application share common code as well (found in the “app” module).
+
+Below is the outline of the module dependency relationship: 
 
   *	core 
     *	common code
-    * (folder is found under restapi)
+    * (the folder is found under restapi folder)
   *	app
     *	client side abstraction
     *	dependencies -> core
@@ -25,4 +27,3 @@ The is project structured by modules which form a dependency relationship betwee
   *	restapi
     *	server side (Spring boot Application)
     *	dependencies -> core
-

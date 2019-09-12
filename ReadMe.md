@@ -1,7 +1,7 @@
 # WakeApp
 This application is a multi-device alarm clock that synchronize the timing and behavior of alarm events across different devices (Android, Windows and Mac platforms) communicating through a RESTful web service. 
 
-Users our subscribing to an account and register their devices. Alarm event than can be synchronized between the devises with fixed time intervals (or simultaneously) and can be set from any of device.  
+Users our subscribing to accounts and register their devices. Alarm event than can be synchronized between the devises with fixed time intervals (or simultaneously) and can be set from any of devices.  
 
 The project utilizes Gradle as a building tool. It implements:
   * RESTful web service (using Spring boot).

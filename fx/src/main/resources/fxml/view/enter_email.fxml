@@ -14,7 +14,7 @@
       <Label styleClass="title" text="Reset password" />
       <Region prefHeight="22.0" prefWidth="200.0" />
       <Label prefHeight="32.0" prefWidth="158.0" styleClass="title" text="Please enter your email:" />
-      <HBox alignment="CENTER_LEFT">
+      <HBox alignment="CENTER">
          <children>
             <TextField fx:id="emailTxtField" alignment="CENTER" />
          </children>

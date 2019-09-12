@@ -17,9 +17,9 @@
 *.iml
 *.properties
 *.iml
-.gradlew
-.gradlew.bat
-.local.properties
+gradlew
+gradlew.bat
+local.properties
 .gitattributes
 
 android/bin

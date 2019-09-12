@@ -17,10 +17,10 @@
 *.iml
 *.properties
 *.iml
-gradlew
-gradlew.bat
-local.properties
-.gitattributes
+/gradlew
+/gradlew.bat
+/local.properties
+/.gitattributes
 
 android/bin
 android/build

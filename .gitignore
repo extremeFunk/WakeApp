@@ -9,11 +9,18 @@
 /.metadata
 /.settings
 /.idea
+/.gradle
+/gradle
 /bu
 
 *.log
 *.iml
 *.properties
+*.iml
+.gradlew
+.gradlew.bat
+.local.properties
+.gitattributes
 
 android/bin
 android/build
@@ -52,6 +59,8 @@ fx/bu
 fx/*.log
 fx/*.iml
 fx/*.properties
+fx/artifacts
+fx/meta-inf
 
 restapi/bin
 restapi/build

@@ -1,7 +1,5 @@
 package io.rainrobot.wake.android.view.login;
 
-import io.rainrobot.wake.android.client.AndroidASyncProvider;
-import io.rainrobot.wake.app.AppLogger;
 import io.rainrobot.wake.core.*;
 import org.junit.Before;
 import org.junit.Rule;
@@ -51,25 +49,23 @@ public class LoginActivityTest {
 
     @Rule
     public ActivityTestRule<LoginActivity> rule = new ActivityTestRule<>(LoginActivity.class);
-    private AppLogger logger;
 
     @Before
     public void setUp() {
         view = new AndroidLoginView(rule.getActivity().getWakeApplication().getContextMgr());
         model = mock(LoginModel.class);
-        logger = mock(AppLogger.class);
         controllerMgr = mock(ControllerMgr.class);
 
-        controller = new LoginController(view,
-                                            model,
-                                            logger,
-                                            controllerMgr,
-                                            new AndroidASyncProvider());
+//        controller = new LoginController(view,
+//                                            model,
+//                                            controllerMgr,
+//                                            new AndroidASyncProvider());
         //start setup the UI, do not delete
         controller.show();
 
         doThrow(HttpStatusCodeException.class).when(model)
                 .login(not(eq(validUsrNm)),not(eq(validPass)),anyBoolean());
+
     }
 
     @NonNull
@@ -112,6 +108,7 @@ public class LoginActivityTest {
     public void btnSingupClick() {
         onView(withId(R.id.enterNewPasswordGoBackBtn)).perform(ViewActions.click());
         verify(controllerMgr).showSingup();
+
     }
 
     @Test

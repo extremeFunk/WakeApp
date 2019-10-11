@@ -5,11 +5,8 @@ import android.arch.persistence.room.PrimaryKey;
 import android.arch.persistence.room.TypeConverter;
 import android.arch.persistence.room.TypeConverters;
 
-import java.text.ParsePosition;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.TimeZone;
 
 import io.rainrobot.wake.core.AlarmEvent;
 import io.rainrobot.wake.core.Preset;
@@ -131,15 +128,16 @@ public class AlarmEntity {
 class DateConverter {
 
     @TypeConverter
-    public static Date toDate(String dateLong){
+    public static Date toDate(Long dateLong){
         if(dateLong == null) return null;
-        SimpleDateFormat format = new SimpleDateFormat();
-        return format.parse(dateLong, new ParsePosition(0));
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(dateLong);
+        return calendar.getTime();
     }
 
     @TypeConverter
-    public static String fromDate(Date date){
-        return date == null ? null : new SimpleDateFormat().format(date);
+    public static Long fromDate(Date date){
+        return date == null ? null : date.getTime();
     }
 }
 

@@ -26,6 +26,7 @@ public class AndroidDeviceRegView extends AndroidView<DeviceRegActivity, DeviceR
     }
 
 
+
     @Override
     public void setRegisterCommand(Command command) {
         ((Button)activity.findViewById(R.id.DeviceRegBtn))

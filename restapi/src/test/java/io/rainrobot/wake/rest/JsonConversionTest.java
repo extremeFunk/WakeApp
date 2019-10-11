@@ -16,7 +16,7 @@ import io.rainrobot.wake.core.Account;
 import io.rainrobot.wake.core.AccountSerializer;
 import io.rainrobot.wake.core.Preset;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = MvcConfig.class)
@@ -117,36 +117,4 @@ public class JsonConversionTest {
 
         assertThat(parseObject).isEqualToComparingFieldByField(ref);
      }
-
-    @Test
-    public void testPresetDeserializeTime() throws Exception {
-        String content = "{\n" +
-                "        \"id\": 2,\n" +
-                "        \"name\": \"New Preset\",\n" +
-                "        \"alarmEventList\": [],\n" +
-                "        \"account\": {\n" +
-                "            \"id\": 1,\n" +
-                "            \"username\": \"shlomi\"\n" +
-                "        },\n" +
-                "        \"time\": 2733000,\n" +
-                "        \"activeState\": true\n" +
-                "    }";
-
-
-        Preset parseObject = presetjacksonTestr.parseObject(content);
-        System.out.println(parseObject.getTime());
-
-        Preset ref = new Preset();
-        ref.setId(2);
-//        ref.setAlarmEventList(new HashSet<>());
-        ref.setName("New Preset");
-        GregorianCalendar time = new GregorianCalendar();
-        time.setTimeInMillis(2733000);
-        ref.setTime(time.getTime());
-        ref.setActiveState(true);
-        ref.setAccount(new Account(1, "shlomi"));
-        System.out.println(ref.getTime());
-
-        assertThat(parseObject.getTime()).isEqualTo(ref.getTime());
-    }
 }

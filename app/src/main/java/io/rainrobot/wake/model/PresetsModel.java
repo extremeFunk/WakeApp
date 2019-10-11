@@ -1,12 +1,13 @@
 package io.rainrobot.wake.model;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 
 import io.rainrobot.wake.client.PresetClient;
 import io.rainrobot.wake.app.EventUpdateMgr;
 import io.rainrobot.wake.app.IModel;
 import io.rainrobot.wake.core.Preset;
-import io.rainrobot.wake.core.util.DateUtil;
 
 public class PresetsModel implements IModel {
 
@@ -22,14 +23,7 @@ public class PresetsModel implements IModel {
 	public List<Preset> getPresets()  {
 //		presets = Arrays.asList(client.getAllPreset());
 //		return presets;
-		Preset[] arr = client.getAllPreset();
-		List<Preset> list = new ArrayList<>();
-		for(Preset p : arr) {
-			Date jsnTime = p.getTime();
-			Date nuTime = DateUtil.fromHrAndMn(DateUtil.getHr(jsnTime), DateUtil.getMn(jsnTime));
-			p.setTime(nuTime);
-			list.add(p);}
-		return list;
+		return Arrays.asList(client.getAllPreset());
 	}
 
 	public Preset createPreset() {

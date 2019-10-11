@@ -60,7 +60,7 @@ public class Preset implements Idabel{
     @JsonDeserialize(using = AccountDeSerializer.class)
     private Account account;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm")
 	@Temporal(TemporalType.TIME)
 	private Date time;
 
@@ -141,12 +141,12 @@ public class Preset implements Idabel{
 		this.activeState = activeState;
 	}
 
-	public void setTime(Date time) {
-		this.time = time;
-	}
-
 	public Date getTime() {
 		return time;
+	}
+
+	public void setTime(Date time) {
+		this.time = time;
 	}
 
 	public void setAccount(Account account) {

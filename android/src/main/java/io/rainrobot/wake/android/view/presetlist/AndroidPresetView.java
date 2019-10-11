@@ -169,7 +169,6 @@ class PresetListAdapter extends BaseAdapter {
 
 
     private void setClickActions(View view, Preset preset, int itemPos) {
-
         Button deleteButton = view.findViewById(R.id.deleteButtonPresetItem);
         deleteButton.setOnClickListener((v) -> deleteCommand.execute(preset.getId()));
 

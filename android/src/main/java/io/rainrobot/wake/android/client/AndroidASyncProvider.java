@@ -165,5 +165,3 @@ class RunAndPostRunTask <T> extends Task<T> {
         doLast.run();
     }
 }
-
-

@@ -2,8 +2,6 @@ package io.rainrobot.wake.client;
 
 import io.rainrobot.wake.core.Preset;
 
-import java.time.Instant;
-import java.util.Calendar;
 import java.util.Date;
 
 public class PresetClient {
@@ -15,7 +13,6 @@ public class PresetClient {
         this.sender = sender;
         URL = url;
     }
-
 
     public Preset[] getAllPreset() {
         return sender.get(URL, Preset[].class);
@@ -36,11 +33,7 @@ public class PresetClient {
 
     public Preset getById(int preset_id) {
         Preset preset = sender.getWithParam(URL, String.valueOf(preset_id), Preset.class);
-        setTimeZone(preset);
         return preset;
     }
 
-    private void setTimeZone(Preset preset) {
-        Date date = preset.getTime();
-    }
 }

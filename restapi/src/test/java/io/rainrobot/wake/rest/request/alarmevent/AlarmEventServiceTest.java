@@ -8,11 +8,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.HashSet;
-import java.util.Set;
 
 import io.rainrobot.wake.core.Account;
 import io.rainrobot.wake.core.AlarmEvent;
@@ -21,7 +17,6 @@ import io.rainrobot.wake.core.Sound;
 import io.rainrobot.wake.rest.JpaConfig;
 import io.rainrobot.wake.core.Preset;
 import io.rainrobot.wake.rest.Service;
-import io.rainrobot.wake.rest.TestConfig;
 import io.rainrobot.wake.rest.request.account.AccountDoa;
 import io.rainrobot.wake.rest.request.device.DeviceDoa;
 import io.rainrobot.wake.rest.request.preset.PresetDoa;

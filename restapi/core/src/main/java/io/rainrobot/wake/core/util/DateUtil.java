@@ -1,10 +1,16 @@
 package io.rainrobot.wake.core.util;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.OffsetDateTime;
+import java.time.OffsetTime;
+import java.time.ZoneOffset;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
+
+import static java.util.Calendar.*;
 
 public class DateUtil {
 
@@ -20,6 +26,13 @@ public class DateUtil {
         return dateFormat.format(date);
     }
 
+    public static Date getOffsetDate(Date date) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        int offset = TimeZone.getDefault().getOffset(date.getTime()) / 1000 / 60;
+        c.add(MINUTE, -offset);
+        return new Date(c.getTimeInMillis());
+    }
     public static Date fromMili(long timeInMili) {
         Date d = new Date();
         d.setTime(timeInMili);

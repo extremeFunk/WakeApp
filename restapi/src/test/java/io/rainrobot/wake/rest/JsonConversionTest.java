@@ -10,7 +10,11 @@ import org.springframework.boot.test.json.JsonContent;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import io.rainrobot.wake.core.Account;
 import io.rainrobot.wake.core.AccountSerializer;
@@ -29,6 +33,8 @@ public class JsonConversionTest {
     private JacksonTester<Account> accountJacksonTester;
     @Autowired
     private JacksonTester<Preset> presetjacksonTestr;
+    @Autowired
+    private JacksonTester<List<Preset>> prstListTester;
     private static final String PATH_PREFIX = "@.";
 
 
@@ -148,5 +154,27 @@ public class JsonConversionTest {
         System.out.println(ref.getTime());
 
         assertThat(parseObject.getTime()).isEqualTo(ref.getTime());
+    }
+
+    @Test
+    public void test1() throws Exception {
+
+        Preset preset = new Preset();
+        preset.setActiveState(true);
+        Date time = new Date();
+        preset.setTime(time);
+
+        Preset b = new Preset();
+        b  = new Preset();
+        b.setActiveState(true);
+        Date t = new Date();
+        b.setTime(t);
+        List<Preset> list = new ArrayList<>();
+        list.add(preset);
+        list.add(b);
+
+        String json = prstListTester.write(list).getJson();
+        System.out.println(json);
+
     }
 }

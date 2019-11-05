@@ -86,3 +86,30 @@ restapi/core/*.log
 restapi/core/*.iml
 restapi/core/*.properties
 
+android/src/main/fiture.bmp
+android/src/main/fiture.png
+android/src/main/New Bitmap Image.bmp
+android/src/main/Screenshot_2019-10-22-11-55-28-675_io.rainrobot.wake.png
+android/src/main/Screenshot_2019-10-22-11-56-24-551_io.rainrobot.wake.png
+android/wake_key_store.jks
+android/.classpath
+android/.project
+/classes
+/fx/artifact
+app/.classpath
+app/.project
+fx/gradlew.bat
+fx/gradlew
+fx/fx.iml
+fx/.project
+fx/.classpath
+fx/gradle/wrapper/gradle-wrapper.jar
+fx/gradle/wrapper/gradle-wrapper.properties
+fx/.gradle/buildOutputCleanup/outputFiles.bin
+fx/.gradle/buildOutputCleanup/cache.properties
+fx/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+fx/.gradle/4.3/taskHistory/taskHistory.lock
+fx/.gradle/4.3/taskHistory/taskHistory.bin
+fx/.gradle/4.3/fileHashes/fileHashes.lock
+fx/.gradle/4.3/fileHashes/fileHashes.bin
+fx/.gradle/4.3/fileChanges/last-build.bin

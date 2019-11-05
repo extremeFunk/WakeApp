@@ -1,45 +1,33 @@
 package io.rainrobot.wake.rest.configuration.appuser;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
-
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-@Entity
-@Table(name="User")
+import javax.validation.constraints.NotEmpty;
+import java.util.ArrayList;
+import java.util.List;
+
+@Document
 public class AppUser {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
-	
+
 	@NotEmpty
-	@Column(name="USERNAME", nullable=false)	
 	private String username;
 
 	@NotEmpty
-	@Column(name="EMAIL")
 	private String email;
 	
 	@NotEmpty
-	@Column(name="PASSWORD", nullable=false)
 	private String password;
 		
 	@NotEmpty
-	@Column(name="AUTHORITY", nullable=false)
 	private String authority;
 
 	@NotEmpty
-	@Column(name="STATE", nullable=false)
 	private String state;
 
 	private Integer resetToken;
@@ -75,7 +63,7 @@ public class AppUser {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	//TODO
 	public List<GrantedAuthority> getAuthority() {
 		List<GrantedAuthority> rtn = new ArrayList<>();
 		rtn.add(new SimpleGrantedAuthority(authority));

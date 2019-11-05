@@ -13,8 +13,6 @@ import java.util.List;
 public class AppUser {
 
 	@Id
-	int id;
-
 	@NotEmpty
 	private String username;
 

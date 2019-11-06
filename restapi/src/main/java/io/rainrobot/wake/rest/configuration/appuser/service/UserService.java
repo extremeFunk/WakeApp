@@ -9,8 +9,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.rainrobot.wake.rest.configuration.appuser.AppUser;
-import io.rainrobot.wake.rest.configuration.appuser.dao.AppUserRepo;
+import io.rainrobot.wake.rest.dto.AppUser;
+import repo.AppUserRepo;
 
 @Service("userService")
 @Transactional

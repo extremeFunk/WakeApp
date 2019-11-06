@@ -5,7 +5,7 @@ import io.rainrobot.wake.core.Path;
 import io.rainrobot.wake.core.Preset;
 import io.rainrobot.wake.core.util.DateUtil;
 import io.rainrobot.wake.rest.configuration.appuser.AppAuth;
-import io.rainrobot.wake.rest.configuration.appuser.AppUser;
+import io.rainrobot.wake.rest.dto.AppUser;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;

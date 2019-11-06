@@ -2,6 +2,7 @@ package io.rainrobot.wake.rest.configuration.appuser;
 
 import java.util.Collection;
 
+import io.rainrobot.wake.rest.dto.AppUser;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 

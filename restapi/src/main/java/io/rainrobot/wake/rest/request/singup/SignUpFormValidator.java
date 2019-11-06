@@ -6,7 +6,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import io.rainrobot.wake.rest.configuration.appuser.dao.AppUserRepo;
+import repo.AppUserRepo;
 import io.rainrobot.wake.core.SignUpForm;
 import io.rainrobot.wake.core.SingupError;
 

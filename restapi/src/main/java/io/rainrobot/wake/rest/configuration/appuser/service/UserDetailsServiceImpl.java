@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.rainrobot.wake.rest.configuration.appuser.AppUser;
+import io.rainrobot.wake.rest.dto.AppUser;
 
 
 

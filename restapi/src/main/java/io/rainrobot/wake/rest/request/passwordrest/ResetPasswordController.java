@@ -4,13 +4,12 @@ import java.util.Optional;
 import java.util.Random;
 
 import io.rainrobot.wake.core.Path;
-import io.rainrobot.wake.rest.configuration.appuser.AppUser;
+import io.rainrobot.wake.rest.dto.AppUser;
 import io.rainrobot.wake.rest.configuration.appuser.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpServerErrorException;
 

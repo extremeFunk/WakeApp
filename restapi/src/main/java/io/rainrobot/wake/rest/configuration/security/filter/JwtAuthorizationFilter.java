@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import io.jsonwebtoken.Jwts;
 import io.rainrobot.wake.rest.configuration.Values;
 import io.rainrobot.wake.rest.configuration.appuser.AppAuth;
-import io.rainrobot.wake.rest.configuration.appuser.AppUser;
+import io.rainrobot.wake.rest.dto.AppUser;
 import io.rainrobot.wake.rest.configuration.appuser.service.UserService;
 import io.rainrobot.wake.rest.configuration.security.SecurityConstants;
 

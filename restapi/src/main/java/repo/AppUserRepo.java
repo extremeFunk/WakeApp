@@ -1,9 +1,9 @@
-package io.rainrobot.wake.rest.configuration.appuser.dao;
+package repo;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import io.rainrobot.wake.rest.configuration.appuser.AppUser;
+import io.rainrobot.wake.rest.dto.AppUser;
 
 import java.util.Optional;
 

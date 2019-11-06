@@ -46,7 +46,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-mail'
     implementation 'io.jsonwebtoken:jjwt:0.6.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImpementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0'
+    testImpementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo:jar:2.2.0'
     testImplementation 'org.springframework.security:spring-security-test'
     testImplementation 'com.h2database:h2:1.4.194'
     testImplementation 'org.assertj:assertj-core:3.4.1'
@@ -54,4 +54,6 @@ dependencies {
     implementation 'com.sun.xml.bind:jaxb-core:2.2.11'
     implementation 'com.sun.xml.bind:jaxb-impl:2.2.11'
     implementation 'javax.activation:activation:1.1.1'
+    implementation 'org.projectlombok:lombok:jar:1.18.8'
+
 }

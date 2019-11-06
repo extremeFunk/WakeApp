@@ -9,8 +9,8 @@ import org.springframework.http.MediaType;
 import java.util.Date;
 
 import io.rainrobot.wake.client.AccountClient;
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.Path;
+import io.rainrobot.wake.rest.dto.Account;
+import io.rainrobot.wake.rest.dto.Path;
 
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.header;

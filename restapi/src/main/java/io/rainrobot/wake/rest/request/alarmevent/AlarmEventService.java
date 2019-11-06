@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AlarmEvent;
-import io.rainrobot.wake.core.Device;
-import io.rainrobot.wake.core.Preset;
-import io.rainrobot.wake.core.Sound;
+import io.rainrobot.wake.rest.dto.Account;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
+import io.rainrobot.wake.rest.dto.Device;
+import io.rainrobot.wake.rest.dto.Preset;
+import io.rainrobot.wake.rest.dto.Sound;
 import io.rainrobot.wake.rest.request.account.AccountDoa;
 import io.rainrobot.wake.rest.request.device.DeviceDoa;
 import io.rainrobot.wake.rest.request.preset.PresetDoa;

@@ -2,7 +2,6 @@ package io.rainrobot.wake.rest.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

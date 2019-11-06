@@ -11,9 +11,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import io.rainrobot.wake.core.AlarmEvent;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
 import io.rainrobot.wake.rest.JpaConfig;
-import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.rest.dto.Preset;
 import io.rainrobot.wake.rest.Service;
 
 @RunWith(SpringRunner.class)

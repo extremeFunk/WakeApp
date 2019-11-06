@@ -11,16 +11,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AlarmEvent;
-import io.rainrobot.wake.core.Device;
-import io.rainrobot.wake.core.Preset;
-import io.rainrobot.wake.core.Sound;
+import io.rainrobot.wake.rest.dto.Account;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
+import io.rainrobot.wake.rest.dto.Device;
+import io.rainrobot.wake.rest.dto.Preset;
+import io.rainrobot.wake.rest.dto.Sound;
 import io.rainrobot.wake.rest.request.alarmevent.AlarmEventDoa;
 
 @RunWith(SpringRunner.class)

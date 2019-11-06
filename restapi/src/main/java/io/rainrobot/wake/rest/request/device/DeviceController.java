@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.rainrobot.wake.core.Path;
+import io.rainrobot.wake.rest.dto.Path;
 import io.rainrobot.wake.rest.configuration.appuser.AppAuth;
-import io.rainrobot.wake.core.AlarmEvent;
-import io.rainrobot.wake.core.Device;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
+import io.rainrobot.wake.rest.dto.Device;
 
 
 @RestController()

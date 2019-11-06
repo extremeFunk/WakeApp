@@ -1,6 +1,6 @@
 package io.rainrobot.wake.rest.request.testtoken;
 
-import io.rainrobot.wake.core.Path;
+import io.rainrobot.wake.rest.dto.Path;
 import io.rainrobot.wake.rest.configuration.appuser.AppAuth;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -6,10 +6,10 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 
 import io.rainrobot.wake.client.AlarmEventClient;
-import io.rainrobot.wake.core.AlarmEvent;
-import io.rainrobot.wake.core.Device;
-import io.rainrobot.wake.core.Path;
-import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
+import io.rainrobot.wake.rest.dto.Device;
+import io.rainrobot.wake.rest.dto.Path;
+import io.rainrobot.wake.rest.dto.Preset;
 
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.*;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.*;

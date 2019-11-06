@@ -1,8 +1,8 @@
 package io.rainrobot.wake.rest.request.preset;
 
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.Path;
-import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.rest.dto.Account;
+import io.rainrobot.wake.rest.dto.Path;
+import io.rainrobot.wake.rest.dto.Preset;
 import io.rainrobot.wake.core.util.DateUtil;
 import io.rainrobot.wake.rest.configuration.appuser.AppAuth;
 import io.rainrobot.wake.rest.dto.AppUser;

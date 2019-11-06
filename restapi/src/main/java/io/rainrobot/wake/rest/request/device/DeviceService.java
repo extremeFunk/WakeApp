@@ -1,9 +1,9 @@
 package io.rainrobot.wake.rest.request.device;
 
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AlarmEvent;
-import io.rainrobot.wake.core.Device;
-import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.rest.dto.Account;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
+import io.rainrobot.wake.rest.dto.Device;
+import io.rainrobot.wake.rest.dto.Preset;
 import io.rainrobot.wake.rest.request.account.AccountDoa;
 import io.rainrobot.wake.rest.request.alarmevent.AlarmEventDoa;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class DeviceService {

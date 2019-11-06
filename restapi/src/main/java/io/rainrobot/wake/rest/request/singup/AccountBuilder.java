@@ -2,7 +2,7 @@ package io.rainrobot.wake.rest.request.singup;
 
 import java.util.Date;
 
-import io.rainrobot.wake.core.Account;
+import io.rainrobot.wake.rest.dto.Account;
 
 public class AccountBuilder {
 	

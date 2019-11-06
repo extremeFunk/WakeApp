@@ -11,7 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.rest.dto.Preset;
 import io.rainrobot.wake.rest.request.preset.PresetController;
 import io.rainrobot.wake.rest.request.preset.PresetService;
 

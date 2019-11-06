@@ -10,15 +10,14 @@ import org.springframework.boot.test.json.JsonContent;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AccountSerializer;
-import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.rest.dto.Account;
+import io.rainrobot.wake.rest.dto.AccountSerializer;
+import io.rainrobot.wake.rest.dto.Preset;
 
 import static org.assertj.core.api.Assertions.*;
 

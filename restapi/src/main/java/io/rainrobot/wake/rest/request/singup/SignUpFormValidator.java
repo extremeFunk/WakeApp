@@ -1,14 +1,13 @@
 package io.rainrobot.wake.rest.request.singup;
 
+import io.rainrobot.wake.rest.dto.SignUpForm;
+import io.rainrobot.wake.rest.dto.SingupError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-
 import repo.AppUserRepo;
-import io.rainrobot.wake.core.SignUpForm;
-import io.rainrobot.wake.core.SingupError;
 
 @Service
 public class SignUpFormValidator implements Validator {

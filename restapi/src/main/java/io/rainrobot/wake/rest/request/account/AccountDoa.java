@@ -3,7 +3,7 @@ package io.rainrobot.wake.rest.request.account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import io.rainrobot.wake.core.Account;
+import io.rainrobot.wake.rest.dto.Account;
 
 @Repository
 public interface AccountDoa extends JpaRepository<Account, Integer> {

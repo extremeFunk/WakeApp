@@ -1,6 +1,6 @@
 package io.rainrobot.wake.rest.request.account;
 
-import io.rainrobot.wake.core.Account;
+import io.rainrobot.wake.rest.dto.Account;
 import io.rainrobot.wake.rest.configuration.appuser.Authority;
 import io.rainrobot.wake.rest.configuration.appuser.State;
 import org.junit.Test;
@@ -16,7 +16,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import io.rainrobot.wake.core.Path;
+import io.rainrobot.wake.rest.dto.Path;
 import io.rainrobot.wake.rest.configuration.appuser.AppAuth;
 import io.rainrobot.wake.rest.dto.AppUser;
 import org.springframework.test.web.servlet.MvcResult;

@@ -7,11 +7,11 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 
 import java.util.GregorianCalendar;
 
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AccountDesrializer;
-import io.rainrobot.wake.core.AccountSerializer;
-import io.rainrobot.wake.core.GregorianCalenderDeserializer;
-import io.rainrobot.wake.core.GregorianCalenderSerializer;
+import io.rainrobot.wake.rest.dto.Account;
+import io.rainrobot.wake.rest.dto.AccountDesrializer;
+import io.rainrobot.wake.rest.dto.AccountSerializer;
+import io.rainrobot.wake.rest.dto.GregorianCalenderDeserializer;
+import io.rainrobot.wake.rest.dto.GregorianCalenderSerializer;
 
 public class MessageConvertersProvider {
 

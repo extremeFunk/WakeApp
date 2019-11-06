@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import io.rainrobot.wake.core.Path;
+import io.rainrobot.wake.rest.dto.Path;
 import io.rainrobot.wake.rest.configuration.appuser.AppAuth;
-import io.rainrobot.wake.core.AlarmEvent;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
 
 @RestController()
 @RequestMapping(Path.ALARMEVENT)

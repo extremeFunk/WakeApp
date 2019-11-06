@@ -3,7 +3,7 @@ package io.rainrobot.wake.rest.request.passwordrest;
 import java.util.Optional;
 import java.util.Random;
 
-import io.rainrobot.wake.core.Path;
+import io.rainrobot.wake.rest.dto.Path;
 import io.rainrobot.wake.rest.dto.AppUser;
 import io.rainrobot.wake.rest.configuration.appuser.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

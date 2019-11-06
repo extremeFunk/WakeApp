@@ -8,15 +8,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.rainrobot.wake.core.Path;
+import io.rainrobot.wake.rest.dto.Path;
 import io.rainrobot.wake.rest.configuration.appuser.service.UserService;
 import io.rainrobot.wake.rest.request.account.AccountService;
-import io.rainrobot.wake.core.SignUpForm;
-import io.rainrobot.wake.core.SingupError;
+import io.rainrobot.wake.rest.dto.SignUpForm;
+import io.rainrobot.wake.rest.dto.SingupError;
 
 
 @RestController()

@@ -1,7 +1,7 @@
 package io.rainrobot.wake.rest.configuration.security.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.rainrobot.wake.core.LoginEntity;
+import io.rainrobot.wake.rest.dto.LoginEntity;
 import io.rainrobot.wake.rest.configuration.Values;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

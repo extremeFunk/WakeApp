@@ -1,7 +1,6 @@
 package io.rainrobot.wake.rest.request.account;
 
 import java.util.Date;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -13,10 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.rainrobot.wake.core.Device;
-import io.rainrobot.wake.core.Path;
+import io.rainrobot.wake.rest.dto.Path;
 import io.rainrobot.wake.rest.configuration.appuser.AppAuth;
-import io.rainrobot.wake.core.Account;
+import io.rainrobot.wake.rest.dto.Account;
 
 @RestController(Path.ACCOUNT)
 public class AccountController {

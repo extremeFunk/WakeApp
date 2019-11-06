@@ -3,10 +3,7 @@ package io.rainrobot.wake.rest.request.account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
-
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.Device;
+import io.rainrobot.wake.rest.dto.Account;
 
 @Service
 public class AccountService {

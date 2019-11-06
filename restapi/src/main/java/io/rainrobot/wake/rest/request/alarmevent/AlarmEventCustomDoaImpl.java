@@ -2,17 +2,15 @@ package io.rainrobot.wake.rest.request.alarmevent;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
-import io.rainrobot.wake.core.AlarmEvent;
-import io.rainrobot.wake.core.Device;
-import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
+import io.rainrobot.wake.rest.dto.Device;
+import io.rainrobot.wake.rest.dto.Preset;
 
 @Transactional
 public class AlarmEventCustomDoaImpl implements AlarmEventCustomDoa {

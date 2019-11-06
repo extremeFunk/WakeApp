@@ -5,13 +5,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import javax.transaction.Transactional;
 
-import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AlarmEvent;
-import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.rest.dto.Account;
+import io.rainrobot.wake.rest.dto.AlarmEvent;
+import io.rainrobot.wake.rest.dto.Preset;
 import io.rainrobot.wake.rest.request.account.AccountDoa;
 import io.rainrobot.wake.rest.request.alarmevent.AlarmEventDoa;
 

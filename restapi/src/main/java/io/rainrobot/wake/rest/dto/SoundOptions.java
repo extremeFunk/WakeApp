@@ -1,14 +1,8 @@
 package io.rainrobot.wake.rest.dto;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Enumerated;
 
-;
-
-@Embeddable
 public class SoundOptions {
-	
-	@Enumerated
+
 	private Sound sound;
 
 	private int volume;

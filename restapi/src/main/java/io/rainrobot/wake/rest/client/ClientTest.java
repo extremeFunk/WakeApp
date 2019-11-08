@@ -15,13 +15,13 @@ import io.rainrobot.wake.client.IHttpRequestSender;
 import io.rainrobot.wake.android.client.springClient.SpringHttpRequestSenderConfiguraton;
 import io.rainrobot.wake.core.util.Log;
 import io.rainrobot.wake.core.util.defaultLog;
-import io.rainrobot.wake.rest.JpaConfig;
+import io.rainrobot.wake.rest.MongoConfig;
 import io.rainrobot.wake.rest.Service;
 import io.rainrobot.wake.rest.MvcConfig;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {Service.class, JpaConfig.class, MvcConfig.class},
+@SpringBootTest(classes = {Service.class, MongoConfig.class, MvcConfig.class},
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 abstract class ClientTest {
 

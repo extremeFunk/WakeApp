@@ -1,9 +1,10 @@
 package io.rainrobot.wake.rest.dto;
 
-import java.util.List;
+import lombok.Builder;
 
+import java.util.List;
+@Builder
 public class Device {
-	private Integer id;
 	private String name;
 	private List<AlarmEvent> eventList;
 }

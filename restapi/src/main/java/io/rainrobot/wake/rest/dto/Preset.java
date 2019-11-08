@@ -1,10 +1,11 @@
 package io.rainrobot.wake.rest.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Builder;
 
 import java.util.Date;
 import java.util.List;
-
+@Builder
 public class Preset {
 	private String name;
 	private List<AlarmEvent> alarmEventList;

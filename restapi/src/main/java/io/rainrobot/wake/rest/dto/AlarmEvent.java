@@ -1,5 +1,8 @@
 package io.rainrobot.wake.rest.dto;
 
+import lombok.Builder;
+
+@Builder
 public class AlarmEvent {
 	public static final String DELAY_SUFFIX = " min.";
 	public static final String SNOOZE_SUFFIX = " min.";
@@ -17,8 +20,7 @@ public class AlarmEvent {
 	public static final int VOL_MIN = 1;
 	public static final int VOL_MAX = 100;
 
-	private Integer id;
-	private Device device;
+	private String device;
 	private int delay;
 	private Sound sound;
 	private int vol;

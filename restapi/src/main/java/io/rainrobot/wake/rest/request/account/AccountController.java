@@ -27,13 +27,7 @@ public class AccountController {
 		return service.findByUsername(user.getName());
 	}
 
-	@PutMapping(Path.ACCOUNT)
-	public void updateAccountName(	@AuthenticationPrincipal AppAuth user,
-									@RequestBody String newName) {
-		Account account = service.findByUsername(user.getName());
-		account.setUsername(newName);
-		service.save(account);
-	}
+
 
 	@DeleteMapping(Path.ACCOUNT)
 	public void deleteAccount(@AuthenticationPrincipal AppAuth user) {
@@ -47,6 +41,6 @@ public class AccountController {
 
 	@RequestMapping(method = RequestMethod.GET, value = Path.LASTCHANGE)
 	public Date getLastChange(@AuthenticationPrincipal AppAuth user) {
-		return service.findByUsername(user.getName()).getLastChange();
+		return null;
 	}
 }

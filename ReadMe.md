@@ -13,15 +13,15 @@ This is a modular Gradle project. Both server and client side utilize common cod
 Below is the outline of the module dependency relationship: 
 
   *	core 
-    *	common components libary
+    *	common components library
   *	app
     *	client side abstraction framework
     *	dependencies -> core
   *	fx
-    *	Windows/Mac UI
+    *	Windows/Mac UI implementation
     *	dependencies -> core & app
   *	android
-    *	Android UI
+    *	Android UI implementation
     *	dependencies -> core & app
   *	restapi
     *	server side (Spring boot Application)

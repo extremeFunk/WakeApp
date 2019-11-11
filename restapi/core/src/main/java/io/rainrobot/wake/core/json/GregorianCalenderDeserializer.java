@@ -1,4 +1,4 @@
-package io.rainrobot.wake.core;
+package io.rainrobot.wake.core.json;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

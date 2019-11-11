@@ -14,7 +14,7 @@ import io.rainrobot.wake.client.ClientFactory;
 import io.rainrobot.wake.client.IHttpRequestSender;
 import io.rainrobot.wake.android.client.springClient.SpringHttpRequestSenderConfiguraton;
 import io.rainrobot.wake.core.util.Log;
-import io.rainrobot.wake.core.util.defaultLog;
+import io.rainrobot.wake.core.util.DefaultLog;
 import io.rainrobot.wake.rest.JpaConfig;
 import io.rainrobot.wake.rest.Service;
 import io.rainrobot.wake.rest.MvcConfig;
@@ -42,6 +42,6 @@ abstract class ClientTest {
                 .getRequestSender(tmp);
         sender.setAuthorization(AUTH);
         clientFactory = new ClientFactory(sender);
-        Log.log = new defaultLog();
+        Log.log = new DefaultLog();
     }
 }

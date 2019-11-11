@@ -17,7 +17,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AccountSerializer;
+import io.rainrobot.wake.core.json.AccountSerializer;
 import io.rainrobot.wake.core.Preset;
 
 import static org.assertj.core.api.Assertions.*;

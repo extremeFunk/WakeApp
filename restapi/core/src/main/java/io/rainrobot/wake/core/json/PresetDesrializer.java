@@ -1,10 +1,11 @@
-package io.rainrobot.wake.core;
+package io.rainrobot.wake.core.json;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
+import io.rainrobot.wake.core.Preset;
 
 import java.io.IOException;
 @Deprecated

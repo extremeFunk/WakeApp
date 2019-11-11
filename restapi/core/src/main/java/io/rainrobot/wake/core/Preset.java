@@ -4,66 +4,36 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
 import io.rainrobot.wake.core.json.AccountDeSerializer;
 import io.rainrobot.wake.core.json.AlarmEventDeSerializer;
 import io.rainrobot.wake.core.json.IdabelCollectionSerializer;
-import io.rainrobot.wake.core.json.IdabelDeSerializer;
 import io.rainrobot.wake.core.json.IdabelSerilizer;
+
+import javax.persistence.*;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Preset implements Idabel{
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer id;
-
 	private String name;
-
 	@JsonSerialize(using = IdabelCollectionSerializer.class)
 	@JsonDeserialize(contentUsing = AlarmEventDeSerializer.class)
-//	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, orphanRemoval = true, mappedBy = "preset")
-	@OneToMany(fetch=FetchType.LAZY,
-			cascade=CascadeType.REMOVE,
-			orphanRemoval = true,
-			mappedBy = "preset")
+	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.REMOVE,
+				orphanRemoval = true, mappedBy = "preset")
 	private Set<AlarmEvent> alarmEventList = new HashSet<>();
-
-    @ManyToOne(cascade =
-            {
-//			        CascadeType.PERSIST,
-                    CascadeType.DETACH,
-//							CascadeType.MERGE,
-                    CascadeType.REFRESH}
-    )
+    @ManyToOne(cascade = { CascadeType.DETACH, CascadeType.REFRESH})
     @JsonSerialize(using = IdabelSerilizer.class)
     @JsonDeserialize(using = AccountDeSerializer.class)
     private Account account;
-
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss.SS Z")
+	@JsonFormat(shape = JsonFormat.Shape.STRING,
+				pattern = "yyyy-MM-dd@HH:mm:ss.SS Z")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date time;
-
 	@Column(columnDefinition = "TINYINT", length = 1)
 	private Boolean activeState;
 	

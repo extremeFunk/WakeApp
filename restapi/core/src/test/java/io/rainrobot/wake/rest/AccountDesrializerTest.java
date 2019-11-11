@@ -4,10 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
 import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AccountDesrializer;
+import io.rainrobot.wake.core.json.AccountDesrializer;
 import io.rainrobot.wake.core.AlarmEvent;
 import io.rainrobot.wake.core.Preset;
-import io.rainrobot.wake.core.json.AccountDeSerializer;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,8 +21,6 @@ public class AccountDesrializerTest {
     public void deserialize() throws Exception{
         ObjectMapper mapper = new ObjectMapper();
         SimpleModule module = new SimpleModule();
-        //adding our custom serializer and deserializer
-//        module.addSerializer(Account.class ,new AccountDeSerializer());
         module.addDeserializer(Account.class, new AccountDesrializer());
         mapper.registerModule(module);
 

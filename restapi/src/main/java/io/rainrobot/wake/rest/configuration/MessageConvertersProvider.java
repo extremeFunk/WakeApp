@@ -2,8 +2,8 @@ package io.rainrobot.wake.rest.configuration;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import io.rainrobot.wake.core.Account;
-import io.rainrobot.wake.core.AccountDesrializer;
-import io.rainrobot.wake.core.AccountSerializer;
+import io.rainrobot.wake.core.json.AccountDesrializer;
+import io.rainrobot.wake.core.json.AccountSerializer;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 

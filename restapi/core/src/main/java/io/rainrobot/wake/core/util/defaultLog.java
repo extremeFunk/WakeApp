@@ -1,6 +1,6 @@
 package io.rainrobot.wake.core.util;
 
-public class defaultLog implements ILog {
+public class DefaultLog implements ILog {
     @Override
     public void i(String tag, String msg) {
         print(tag, msg);

@@ -23,14 +23,14 @@ public class SpringHttpRequestSenderConfiguraton {
     }
 
     public IHttpRequestSender getRequestSender(RestTemplate tamplet) {
-        initilizeTemplet(tamplet);
+        initializeTemple(tamplet);
         sender = new SpringHttpRequestSender(tamplet, getHeaders());
        return sender;
     }
 
-    private void initilizeTemplet(RestTemplate tamplet) {
-        tamplet.setInterceptors(getClientHttpRequestInterceptors());
-        tamplet.getMessageConverters().add(getConverters());
+    private void initializeTemple(RestTemplate template) {
+        template.setInterceptors(getClientHttpRequestInterceptors());
+        template.getMessageConverters().add(getConverters());
     }
 
 
@@ -68,11 +68,6 @@ public class SpringHttpRequestSenderConfiguraton {
 
     public SimpleModule getJsonModule() {
         SimpleModule module = new SimpleModule();
-
-//        module.addSerializer(Account.class, new IdabelSerilizer());
-//        module.addDeserializer(Account.class, new AccountDesrializer());
-//        module.addSerializer(GregorianCalendar.class, new GregorianCalenderSerializer());
-//        module.addDeserializer(GregorianCalendar.class, new GregorianCalenderDeserializer());
         return module;
     }
 

@@ -9,7 +9,6 @@ import io.rainrobot.wake.app.IEventDoa;
 import io.rainrobot.wake.app.IRememberMeDoa;
 import io.rainrobot.wake.app.ITokenDoa;
 import io.rainrobot.wake.app.IViewFactory;
-import io.rainrobot.wake.app.log.MyLogFile;
 import io.rainrobot.wake.client.ASyncProvider;
 import io.rainrobot.wake.client.IHttpRequestSender;
 import io.rainrobot.wake.core.util.ILog;
@@ -19,7 +18,7 @@ import io.rainrobot.wake.fx.alarm.*;
 import io.rainrobot.wake.fx.alarm.mvc.*;
 import io.rainrobot.wake.fx.alarm.mvc.view.NoSnoozeView;
 import io.rainrobot.wake.fx.alarm.mvc.view.SnoozeView;
-import io.rainrobot.wake.fx.client.SpringHttpRequestSenderConfiguraton;
+import io.rainrobot.wake.fx.client.SpringHttpRequestSenderConfiguration;
 
 import io.rainrobot.wake.fx.doa.*;
 import io.rainrobot.wake.fx.view.component.FxmlLoader;
@@ -57,7 +56,7 @@ public class FxConfiguration extends AppConfiguration{
 	@Override
 	public IHttpRequestSender getHttpSender() {
 		return appContainer.sender.get(() -> {
-				return new SpringHttpRequestSenderConfiguraton()
+				return new SpringHttpRequestSenderConfiguration()
 						.getRequestSender();
 			}
 		);

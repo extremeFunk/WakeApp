@@ -67,10 +67,6 @@ public class SpringHttpRequestSenderConfiguration {
 
     public SimpleModule getJsonModule() {
         SimpleModule module = new SimpleModule();
-//        module.addSerializer(Account.class, new IdabelSerilizer());
-//        module.addDeserializer(Account.class, new AccountDesrializer());
-//        module.addSerializer(GregorianCalendar.class, new GregorianCalenderSerializer());
-//        module.addDeserializer(GregorianCalendar.class, new GregorianCalenderDeserializer());
         return module;
     }
 

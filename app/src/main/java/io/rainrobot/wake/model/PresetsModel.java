@@ -11,7 +11,6 @@ import io.rainrobot.wake.core.util.DateUtil;
 public class PresetsModel implements IModel {
 
 	private PresetClient client;
-//	private List<Preset> presets;
 	private EventUpdateMgr eventUpdateMgr;
 
 	public PresetsModel(PresetClient client, EventUpdateMgr eventUpdateMgr) {
@@ -20,28 +19,21 @@ public class PresetsModel implements IModel {
 	}
 
 	public List<Preset> getPresets()  {
-//		presets = Arrays.asList(client.getAllPreset());
-//		return presets;
 		Preset[] arr = client.getAllPreset();
 		List<Preset> list = new ArrayList<>();
 		for(Preset p : arr) {
-			Date jsnTime = p.getTime();
-			Date nuTime = DateUtil.fromHrAndMn(DateUtil.getHr(jsnTime), DateUtil.getMn(jsnTime));
-			p.setTime(nuTime);
 			list.add(p);}
 		return list;
 	}
 
 	public Preset createPreset() {
 		Preset preset = client.createPreset();
-//		presets.plusMinuets(preset);
 		eventUpdateMgr.updateEvents();
 		return preset;
 	}
 
 	public void deletePreset(int id) {
 		client.deletePreset(findById(id));
-//		presets.remove(findById(controllerId));
 	}
 
 

@@ -1,6 +1,4 @@
 /restapi/.git
-/oldGit
-/oldGitWake2
 
 /bin
 /build
@@ -74,15 +72,15 @@ restapi/*.log
 restapi/*.iml
 restapi/*.properties
 
-restapi/core/bin
-restapi/core/build
-restapi/core/arc
-restapi/core/libs
-restapi.core/.metadata
-restapi/core/.settings
-restapi/core/.idea
-restapi/core/bu
-restapi/core/*.log
-restapi/core/*.iml
-restapi/core/*.properties
+core/bin
+core/build
+core/arc
+core/libs
+core/.metadata
+core/.settings
+core/.idea
+core/bu
+core/*.log
+core/*.iml
+core/*.properties
 

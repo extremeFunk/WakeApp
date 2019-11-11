@@ -15,7 +15,6 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -28,6 +27,7 @@ import io.rainrobot.wake.android.configuration.AndroidView;
 import io.rainrobot.wake.android.configuration.ContextMgr;
 import io.rainrobot.wake.controller.PresetsController;
 import io.rainrobot.wake.core.Preset;
+import io.rainrobot.wake.core.util.HrMn;
 import io.rainrobot.wake.util.Command;
 import io.rainrobot.wake.core.util.DateUtil;
 import io.rainrobot.wake.util.IdCommand;
@@ -200,13 +200,11 @@ class PresetListAdapter extends BaseAdapter {
     }
 
     private void createTimePickerDialog(View view, Preset preset) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(preset.getTime());
-        int presetHr = cal.get(Calendar.HOUR_OF_DAY);
-        int presetMn  = cal.get(Calendar.MINUTE);
+        HrMn hrMn = new HrMn(preset.getTime());
 
         TimePickerDialog timePickerDialog
-                = getTimePickerDialogInstance(view, preset, presetHr, presetMn);
+                = getTimePickerDialogInstance(view,
+                    preset, hrMn.getHr(), hrMn.getMn());
         timePickerDialog.show();
     }
 

@@ -13,10 +13,9 @@ This is a modular Gradle project. Both server and client side utilize common cod
 Below is the outline of the module dependency relationship: 
 
   *	core 
-    *	common code
-    * (the folder is found under restapi folder)
+    *	common components libary
   *	app
-    *	client side abstraction
+    *	client side abstraction framework
     *	dependencies -> core
   *	fx
     *	Windows/Mac UI

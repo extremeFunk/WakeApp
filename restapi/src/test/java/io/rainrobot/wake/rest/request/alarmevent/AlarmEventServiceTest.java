@@ -25,7 +25,6 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {JpaConfig.class})
-//@EnableAutoConfiguration
 @SpringBootTest(classes = Service.class)
 @DataJpaTest
 public class AlarmEventServiceTest {
@@ -160,7 +159,4 @@ public class AlarmEventServiceTest {
 
     }
 
-    @Test
-    public void getAllAlarmEvents() {
-    }
 }

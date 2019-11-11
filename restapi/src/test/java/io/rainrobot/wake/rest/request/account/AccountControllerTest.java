@@ -49,28 +49,8 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 public class AccountControllerTest {
     @Autowired
     private MockMvc mvc;
-//    @MockBean
-//    private UserService usrService;
     @MockBean
     private AccountService service;
-//    @MockBean
-//    private JwtAuthenticationFilter authFilter;
-
-//    @Autowired
-//    private WebApplicationContext wac;
-//
-//    @Before
-//    public void setUp() throws Exception {
-//        mvc = MockMvcBuilders
-//                .webAppContextSetup(wac)
-//                .apply(SecurityMockMvcConfigurers
-//                        .springSecurity())
-//                .build();
-//    }
-
-    @Test
-    public void getAccount() {
-    }
 
     @Test
     public void updateAccountName() throws Exception {
@@ -88,23 +68,15 @@ public class AccountControllerTest {
     }
 
     @Test
-//    @WithMockUser(value = "admin",
-//            username = "admin",
-//            password = "pass",
-//            authorities = {"ADMIN"})
     public void deleteAccount() throws Exception {
         String usrNm = "admin";
         AppUser appUser = new AppUser(usrNm, "pass");
         appUser.setAuthority(Authority.ADMIN);
         appUser.setState(State.ACTIVE);
 
-//        when(usrService.findByUsername(usrNm)).thenReturn(appUser);
-//        String token = Values.TOKEN_PREFIX + TokenBuilder.create(usrNm);
-
         mvc.perform(delete(Path.getAccoutUrl())
                   .with(authentication(new AppAuth(appUser, true)))
                   .with(csrf())
-//                .header(Values.AUTH_HEADER, token)
         )
                 .andDo(print())
                 .andExpect(status().isOk());
@@ -117,14 +89,9 @@ public class AccountControllerTest {
     public void getAccountName() throws Exception {
         String usrNm = "admin";
         AppUser appUser = new AppUser(usrNm, "pass");
-//        HttpHeaders headers = new HttpHeaders();
-//        Mockito.when(usrService.findByUsername(usrNm)).thenReturn(appUser);
-//        String token = Values.TOKEN_PREFIX + TokenBuilder.create(usrNm);
-//        headers.set(Values.AUTH_HEADER, token);
 
         mvc.perform(get(Path.USERNAME)
                 .with(authentication(new AppAuth(appUser, true))))
-//                .header(Values.AUTH_HEADER, token))
                 .andExpect(status().isOk())
                 .andExpect(content().string(usrNm));
     }

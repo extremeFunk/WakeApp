@@ -25,10 +25,8 @@ import io.rainrobot.wake.rest.request.alarmevent.AlarmEventDoa;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {JpaConfig.class})
-//@EnableAutoConfiguration
 @SpringBootTest(classes = Service.class)
 @DataJpaTest
-//@EntityScan(basePackageClasses = {Account.class, Preset.class, AlarmEvent.class})
 public class EventDoaTest {
 
     @Autowired
@@ -130,7 +128,6 @@ public class EventDoaTest {
     @Test
     public void presetDelete() {
         persistAll();
-
         alarmEventDoa.deleteById(event.getId());
 
         AlarmEvent eFound = entityManager.find(AlarmEvent.class, event.getId());

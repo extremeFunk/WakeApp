@@ -18,7 +18,6 @@ import io.rainrobot.wake.core.Preset;
 public class AlarmEventCustomDoaImpl implements AlarmEventCustomDoa {
 
     @PersistenceContext
-////            (unitName = "deviceEntityManager")
     EntityManager eMgr;
 
     @Override
@@ -31,33 +30,7 @@ public class AlarmEventCustomDoaImpl implements AlarmEventCustomDoa {
         preset.internalAddAlarmEvent(event);
         eMgr.persist(preset);
         eMgr.flush();
-
-//        device.internalRemoveDevice(event);
-//        preset.internalRemoveDevice(event);
-//        eMgr.flush();
-
         return event;
 
-//        Device oldDevice = eMgr.find(Device.class, event.getDevice().getId());
-//        eMgr.find(AlarmEvent.class, event.getId());
-//        eMgr.refresh(event);
-//        eMgr.persist(event);
-//        Device nuDevice = eMgr.find(Device.class, event.getDevice().getId());
-//
-////        event.setDevice(device);
-//        if(event.getDevice().getId() != nuDevice.getId()) {
-//            for(AlarmEvent e : oldDevice.getEventList()) {
-//                if(e.getId() == event.getId()) {
-//                    oldDevice.getEventList().remove(e);
-//                    break;
-//                }
-//            }
-//            eMgr.persist(oldDevice);
-//        }
-//        event.setDevice(nuDevice);
-//        nuDevice.getEventList().add(event);
-//        eMgr.refresh(event);
-//        eMgr.persist(nuDevice);
-//        return event;
     }
 }

@@ -82,8 +82,6 @@ public class JsonConversionTest {
                             "\"id\":2,\"name\":\"New Preset\",\"time\":9933000}";
 
 
-//        referenceObject.setAccount(new Account(2, "bob"));
-//        System.out.println(referenceObject.toString());
         Preset parseObject = presetjacksonTestr.parseObject(content);
         System.out.println(parseObject.toString());
 
@@ -144,7 +142,6 @@ public class JsonConversionTest {
 
         Preset ref = new Preset();
         ref.setId(2);
-//        ref.setAlarmEventList(new HashSet<>());
         ref.setName("New Preset");
         GregorianCalendar time = new GregorianCalendar();
         time.setTimeInMillis(2733000);
@@ -156,25 +153,4 @@ public class JsonConversionTest {
         assertThat(parseObject.getTime()).isEqualTo(ref.getTime());
     }
 
-    @Test
-    public void test1() throws Exception {
-
-        Preset preset = new Preset();
-        preset.setActiveState(true);
-        Date time = new Date();
-        preset.setTime(time);
-
-        Preset b = new Preset();
-        b  = new Preset();
-        b.setActiveState(true);
-        Date t = new Date();
-        b.setTime(t);
-        List<Preset> list = new ArrayList<>();
-        list.add(preset);
-        list.add(b);
-
-        String json = prstListTester.write(list).getJson();
-        System.out.println(json);
-
-    }
 }

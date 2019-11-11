@@ -29,10 +29,8 @@ import io.rainrobot.wake.rest.request.preset.PresetService;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {JpaConfig.class})
-//@EnableAutoConfiguration
 @SpringBootTest(classes = Service.class)
 @DataJpaTest
-//@EntityScan(basePackageClasses = {Account.class, Preset.class, AlarmEvent.class})
 public class PresetServiceTest {
 
     @Autowired

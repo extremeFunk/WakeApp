@@ -19,7 +19,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-//@SpringBootTest(classes = {Service.class, MvcConfig.class})
 @EnableAutoConfiguration
 @WebMvcTest(PresetController.class)
 public class PresetControllerTest {
@@ -37,13 +36,9 @@ public class PresetControllerTest {
     @Test
     public void deletePreset() throws Exception {
         Preset preset = new Preset();
-//        List<Employee> allEmployees = Arrays.asList(alex);
-//        given(service.getAllEmployees()).willReturn(allEmployees);
 
         mvc.perform(delete("/preset", preset)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
-//                .andExpect(jsonPath("$", hasSize(1)))
-//                .andExpect(jsonPath("$[0].name", is(alex.getName())));
     }
 }

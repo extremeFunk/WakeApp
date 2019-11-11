@@ -55,9 +55,6 @@ public class PresetService {
                     " is not found for account " +
                     usrNm);
         } else {
-//                alarmEventDoa.findAllByPreset(preset).forEach(e -> {
-//                    alarmEventDoa.delete(e);
-//                });
             account.getPresetList().remove(preset);
             accountDoa.save(account);
             presetDoa.deleteById(id);

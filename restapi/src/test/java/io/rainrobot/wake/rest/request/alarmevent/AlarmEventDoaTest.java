@@ -19,7 +19,6 @@ import io.rainrobot.wake.rest.Service;
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {JpaConfig.class})
 @EnableTransactionManagement
-//@EnableAutoConfiguration
 @SpringBootTest(classes = Service.class)
 @DataJpaTest
 public class AlarmEventDoaTest {
@@ -35,19 +34,13 @@ public class AlarmEventDoaTest {
         persistPreset.setName("some preset");
         Preset pFound = eMgr.persistFlushFind(persistPreset);
         eMgr.flush();
-//        Preset pojoPreset = new Preset();
-//        pojoPreset.setId(persistPreset.getId());
-//        pojoPreset.setName(persistPreset.getName());
-//        eMgr.clear();
-        //event
-//        pFound.setId(99);
+
         eMgr.merge(pFound);
         AlarmEvent persist = new AlarmEvent(pFound);
         eventDoa.saveAndFlush(persist);
         int delay = 3;
         persist.setDelay(delay);
         saveEventToDao(persist);
-//        eMgr.clear();
 
         Iterable<AlarmEvent> all = eventDoa.findAll();
         Assert.assertTrue(all.iterator().hasNext());
@@ -67,15 +60,5 @@ public class AlarmEventDoaTest {
         return eventDoa.save(persist);
     }
 
-    @Test
-    public void findAllByPreset() {
-    }
 
-    @Test
-    public void deleteById() {
-    }
-
-    @Test
-    public void findByDevice() {
-    }
 }

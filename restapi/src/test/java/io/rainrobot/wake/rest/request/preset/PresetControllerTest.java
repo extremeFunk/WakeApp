@@ -27,17 +27,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(value = PresetController.class)
-//@ContextConfiguration(classes = {
-////        MvcConfig.class,
-//        SecurityConfiguration.class})
 public class PresetControllerTest {
     @Autowired
     private MockMvc mvc;
 
     @MockBean
     private PresetService service;
-//    @MockBean
-//    private JwtAuthenticationFilter authFilter;
 
     @Test
     public void getAccountName() throws Exception {
@@ -51,8 +46,6 @@ public class PresetControllerTest {
         Preset b = new Preset();
         b.setAccount(new Account(0, usrNm));
         b.setActiveState(true);
-//        Date v;
-//        b.setTime(v);
         List<Preset> presetList = new ArrayList<>();
         presetList.add(preset);
         presetList.add(b);
@@ -66,8 +59,4 @@ public class PresetControllerTest {
 
     }
 
-    @Test
-    public void name() {
-
-    }
 }

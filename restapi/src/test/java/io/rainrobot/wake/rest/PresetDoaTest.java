@@ -24,10 +24,8 @@ import io.rainrobot.wake.rest.request.preset.PresetDoa;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {JpaConfig.class})
-//@EnableAutoConfiguration
 @SpringBootTest(classes = Service.class)
 @DataJpaTest
-//@EntityScan(basePackageClasses = {Account.class, Preset.class, AlarmEvent.class})
 public class PresetDoaTest {
 
     @Autowired
@@ -53,7 +51,6 @@ public class PresetDoaTest {
 
         preset = new Preset();
         preset.setName("p1");
-//        preset.setAlarmEventList(aList);
         preset.setAccount(account);
     }
 

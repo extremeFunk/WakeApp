@@ -131,15 +131,14 @@ public class AlarmEntity {
 class DateConverter {
 
     @TypeConverter
-    public static Date toDate(String dateLong){
+    public static Date toDate(Long dateLong){
         if(dateLong == null) return null;
-        SimpleDateFormat format = new SimpleDateFormat();
-        return format.parse(dateLong, new ParsePosition(0));
+        return new Date(dateLong);
     }
 
     @TypeConverter
-    public static String fromDate(Date date){
-        return date == null ? null : new SimpleDateFormat().format(date);
+    public static Long fromDate(Date date){
+        return date == null ? null : date.getTime();
     }
 }
 

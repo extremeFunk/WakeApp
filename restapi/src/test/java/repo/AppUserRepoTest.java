@@ -1,9 +1,10 @@
 package repo;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.rainrobot.wake.rest.configuration.appuser.Authority;
 import io.rainrobot.wake.rest.dto.*;
-import org.assertj.core.api.Assertions;
+
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
@@ -26,37 +28,54 @@ public class AppUserRepoTest {
     public static final String USER = "user";
     @Autowired
     AppUserRepo repo;
+    private AppUser user;
 
     @Before
     public void first_test() {
         /*
+        saved user structure
+
         appuser
             account
                 presets
-                    events 3
+                    events X 3
                         device name 0-2
-                device 3
-                    event 1 (name 0-2)
-         */
+                device X 3
+                    event X 1 (name 0-2)
+        */
 
-        AppUser user = AppUser.builder()
+        user = AppUser.builder()
                 .username(USER)
+                .password("password")
                 .email("email")
-                .authority("regualr")
+                .authority(getAuthorities())
                 .state("active")
+                .resetToken(0)
                 .account(getAccount())
                 .build();
 
         repo.save(user);
     }
 
+    private List<GrantedAuthority> getAuthorities() {
+        List<GrantedAuthority> list = new ArrayList<>();
+        list.add(()-> Authority.ROLE_USER.name());
+        return list;
+    }
+
     @Test
-    public void appUserExist() throws JsonProcessingException {
-        AppUser user = repo.findByUsername(USER);
+    public void appUserExist() throws Exception {
+        AppUser found = repo.findByUsername(USER);
         ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(user);
+        String json = mapper.writeValueAsString(found);
         System.out.println(json);
-        Assertions.assertThat(repo.existsByUsername(USER));
+        assertTrue(repo.existsByUsername(USER));
+    }
+
+    @Test
+    public void appUserDataCorrect() throws Exception {
+        AppUser found = repo.findByUsername(USER);
+        assertEquals(found, user);
     }
 
     private Account getAccount() {
